@@ -12,7 +12,7 @@ public class BinarySearchTree implements BinaryTreeInterface<Integer> {
     @Override
     public void insert(Integer value) {
         if (root == null) {
-            root = new TreeNode<>(value);
+            root = new TreeNode<>(value);  // Neuer Knoten mit Hashwert
         } else {
             insert(value, root);
         }
@@ -22,13 +22,13 @@ public class BinarySearchTree implements BinaryTreeInterface<Integer> {
     private void insert(Integer value, TreeNode<Integer> node) {
         if (value < node.getValue()) {
             if (node.getLeft() == null) {
-                node.setLeft(new TreeNode<>(value));
+                node.setLeft(new TreeNode<>(value));  // Neuer Knoten mit Hashwert
             } else {
                 insert(value, node.getLeft());
             }
         } else {
             if (node.getRight() == null) {
-                node.setRight(new TreeNode<>(value));
+                node.setRight(new TreeNode<>(value));  // Neuer Knoten mit Hashwert
             } else {
                 insert(value, node.getRight());
             }
@@ -112,7 +112,7 @@ public class BinarySearchTree implements BinaryTreeInterface<Integer> {
 
     @Override
     public void balance(TreeNode<Integer> node) {
-
+        // Implementierung kommt noch
     }
 
     public int getSize() {
