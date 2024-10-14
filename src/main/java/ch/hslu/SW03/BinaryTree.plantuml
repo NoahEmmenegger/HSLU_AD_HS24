@@ -1,5 +1,5 @@
 @startuml
-interface IBinaryTree<T> {
+interface BinaryTreeInterface<T> {
     +void insert(T value)
     +void remove(T value)
     +boolean contains(T value)
@@ -30,7 +30,7 @@ class TreeNode<T> {
 
 
 
-IBinaryTree <|-- BinarySearchTree
+BinaryTreeInterface <|-- BinarySearchTree
 BinarySearchTree --> TreeNode
 TreeNode --> TreeNode : left/right
 
