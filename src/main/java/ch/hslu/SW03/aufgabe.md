@@ -48,13 +48,46 @@ B   F J   N
 / \ / \ / \ / \
 A  C E  G I  K M  O
 c.) Suchen Sie im Baum von b) nach den folgenden Elementen: N, K und O.
+N: H->L->N
+K: H->L->J->K
+O: H->L->N->O
 d.) Fügen Sie die folgenden 8 Schlüsselelemente ein einen neuen, leeren binären Baum ein:
 G H B F E A D C
+G
+/ \
+B   H
+/ \ / \
+A   F
+/ \ / \
+C   E
+/ \
+D
+
 e.) Wie sieht ein binärer Baum aus, in welchen die folgenden Elemente eingefügt werden, und
 welcher Datenstruktur entspricht er somit?
 A B C D E F G H
+A
+ \
+  B
+   \
+    C
+     \
+      D
+       \
+        E
+         \
+          F
+           \
+            G
+             \
+              H
+Es ist ein linearer Baum, da alle Knoten nur ein Kind haben.
 f.) Sie haben verschiedene Arten wie ein Baum traversiert werden kann kennen gelernt. In welcher
 Art müssen Sie binäre Bäume traversieren, damit sie der Sortierung folgen?
+inorder:
+1. linken teilbaum besuchen
+2. aktueller knoten besuchen
+3. rechten teilbaum besuchen
 g.) Überprüfen Sie ihre Antwort von f), indem Sie die Bäume der Teilaufgaben b), d) und e)
 entsprechend traversieren. Formulieren Sie dazu (in Pseudocode) eine Funktion mit einem
 rekursiven Algorithmus.
@@ -62,9 +95,9 @@ Tipp: Die Funktion nimmt einen Knoten als formalen Parameter entgegen, der initi
 bekommt die Wurzel des Baumes als aktuellen Parameter! 
 
 Funktion InOrderTraversal(Knoten)
-Wenn Knoten ≠ NULL dann
-InOrderTraversal(Knoten.links)
-Ausgabe(Knoten.schlüssel)
-InOrderTraversal(Knoten.rechts)
-Ende wenn
+ Wenn Knoten ≠ NULL dann
+  InOrderTraversal(Knoten.links)
+  Ausgabe(Knoten.schlüssel)
+  InOrderTraversal(Knoten.rechts)
+ Ende wenn
 Ende Funktion
