@@ -1,8 +1,8 @@
 ## 1 Bäume (allgemein): Begriffe und Merkmale
 
-1. a
-2. e, e, g,k, i c
-3. grad 3
+1. a: a
+2. b: e, e, g,k, i c
+3. c: b, d, h, grad 3
 4. d: nivea 1
 5. e: 1
 6. f: 3
@@ -27,7 +27,7 @@ Wie berechnet sich dieser Wert? log2 n+1
          / \ / \ / \ / \ / \ / \ / \
         16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
 d.) Wie viele Niveaus ergeben sich im schlechtesten Fall?
-Wie berechnet sich dieser Wert? 30
+Wie berechnet sich dieser Wert? 30, log2 n
 e.) Wie viele Knoten kann ein Binärbaum maximal je für die Niveaus 0 bis 5 enthalten? 1 + 2 + 4 + 8 + 16 + 32 = 63
 f.) Können Sie einen binären Baum mit insgesamt fünf Knoten entwerfen, welcher voll ist? voll, letzte ebene von links nach rechts gefüllt
 g.) Wie gross ist der Aufwand für die Suche nach einem Element in einem binären Baum im jeweils
@@ -62,6 +62,8 @@ A   F
 C   E
 / \
 D
+
+nicht ausgeglichen, höhere differenz zwischen knoten
 
 e.) Wie sieht ein binärer Baum aus, in welchen die folgenden Elemente eingefügt werden, und
 welcher Datenstruktur entspricht er somit?
