@@ -1,0 +1,24 @@
+@startuml
+interface Stack {
+    + push(String item) : void
+    + pop() : String
+    + peek() : String
+    + isEmpty() : boolean
+    + isFull() : boolean
+    + size() : int
+}
+
+class ArrayStack implements Stack {
+    - elements : String[]
+    - maxSize : int
+    - top : int
+    + push(String item) : void
+    + pop() : String
+    + peek() : String
+    + isEmpty() : boolean
+    + isFull() : boolean
+    + size() : int
+}
+@enduml
+
+// Da ein Array eine statische Datenstruktur ist, müssen wir sicherstellen, dass die Größe des Arrays überwacht wird. Wenn der Stack voll ist, darf kein weiteres Element hinzugefügt werden. Dies führt zur Einführung der Methode isFull(). Ausserdem muss die push()-Methode prüfen, ob Platz im Array vorhanden ist.

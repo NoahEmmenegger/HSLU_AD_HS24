@@ -1,0 +1,16 @@
+@startuml
+class Storage {
+}
+
+class Memory {
+  - int capacity
+  - String type
+  + Memory(int capacity, String type)
+  + getCapacity(): int
+  + getType(): String
+  + setCapacity(int capacity): void
+  + setType(String type): void
+}
+
+Storage <|-- Memory
+@enduml

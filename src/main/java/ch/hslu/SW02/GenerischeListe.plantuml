@@ -1,0 +1,32 @@
+@startuml
+class LinkedList<T> {
+    - Node<T> head
+    - int size
+    + void add(T item)
+    + T remove()
+    + boolean isEmpty()
+    + int size()
+    + Iterator<T> iterator()
+}
+
+class Node<T> {
+    - T data
+    - Node<T> next
+}
+
+interface Iterator<T> {
+    + boolean hasNext()
+    + T next()
+}
+
+class LinkedListIterator<T> {
+    - Node<T> current
+    + boolean hasNext()
+    + T next()
+}
+
+LinkedList<T> --> Node<T>
+LinkedList<T> --> Iterator<T>
+LinkedListIterator<T> ..|> Iterator<T>
+LinkedList<T> --> LinkedListIterator<T>
+@enduml

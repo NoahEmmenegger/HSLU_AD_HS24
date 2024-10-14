@@ -1,0 +1,225 @@
+@startuml
+class Queue {
+    - char[] array
+    - int head
+    - int tail
+    - int capacity
+    + Queue(int size)
+    + void enqueue(char c)
+    + char dequeue()
+    + boolean isEmpty()
+    + boolean isFull()
+}
+
+Queue : array = []
+Queue : head = 0
+Queue : tail = 0
+Queue : capacity
+
+note right of Queue::head
+  Zeigt auf das Element
+  am Kopf der Queue
+end note
+
+note right of Queue::tail
+  Zeigt auf die nächste
+  freie Position im Array
+end note
+
+@enduml
+
+1. Leere Queue vor und nach dem Einfügen:
+
+@startuml
+class Queue {
+    char[] array = ['_', '_', '_', '_']
+    int head = 0
+    int tail = 0
+    int capacity = 4
+}
+
+Queue : head -> 0
+Queue : tail -> 0
+
+note left of Queue::tail
+  Anfangszustand:
+  Queue ist leer
+  head und tail zeigen auf 0
+end note
+
+@enduml
+Nach dem Einfügen:
+
+@startuml
+class Queue {
+    char[] array = ['A', '_', '_', '_']
+    int head = 0
+    int tail = 1
+    int capacity = 4
+}
+
+Queue : head -> 0
+Queue : tail -> 1
+
+note left of Queue::tail
+  Nach dem Einfügen:
+  Element 'A' wurde an Position 0 hinzugefügt
+  tail wurde inkrementiert
+end note
+
+@enduml
+2. Rotation, wenn tail am Ende des Arrays steht:
+
+@startuml
+class Queue {
+    char[] array = ['A', 'B', 'C', '_']
+    int head = 0
+    int tail = 3
+    int capacity = 4
+}
+
+Queue : head -> 0
+Queue : tail -> 3
+
+note left of Queue::tail
+  Vor dem Einfügen:
+  tail zeigt auf die letzte Position (2)
+end note
+
+@enduml
+Nach der Rotation:
+
+@startuml
+class Queue {
+    char[] array = ['A', 'B', 'C', 'D']
+    int head = 0
+    int tail = 0
+    int capacity = 4
+}
+
+Queue : head -> 0
+Queue : tail -> 0
+
+note left of Queue::tail
+  Nach dem Einfügen:
+  Element 'D' wurde an Position 3 hinzugefügt
+  tail wurde auf 0 zurückgesetzt (Rotation)
+end note
+
+@enduml
+
+1. Leere Queue vor und nach dem Einfügen:
+
+@startuml
+class Queue {
+    char[] array = ['_', '_', '_', '_']
+    int head = 0
+    int tail = 0
+    int capacity = 4
+}
+
+Queue : head -> 0
+Queue : tail -> 0
+
+note left of Queue::tail
+  Anfangszustand:
+  Queue ist leer
+  head und tail zeigen auf 0
+end note
+
+@enduml
+Nach dem Einfügen:
+
+@startuml
+class Queue {
+    char[] array = ['A', '_', '_', '_']
+    int head = 0
+    int tail = 1
+    int capacity = 4
+}
+
+Queue : head -> 0
+Queue : tail -> 1
+
+note left of Queue::tail
+  Nach dem Einfügen:
+  Element 'A' wurde an Position 0 hinzugefügt
+  tail wurde inkrementiert
+end note
+
+@enduml
+2. Rotation, wenn tail am Ende des Arrays steht:
+
+@startuml
+class Queue {
+    char[] array = ['A', 'B', 'C', '_']
+    int head = 0
+    int tail = 3
+    int capacity = 4
+}
+
+Queue : head -> 0
+Queue : tail -> 3
+
+note left of Queue::tail
+  Vor dem Einfügen:
+  tail zeigt auf die letzte Position (2)
+end note
+
+@enduml
+Nach der Rotation:
+
+@startuml
+class Queue {
+    char[] array = ['A', 'B', 'C', 'D']
+    int head = 0
+    int tail = 0
+    int capacity = 4
+}
+
+Queue : head -> 0
+Queue : tail -> 0
+
+note left of Queue::tail
+  Nach dem Einfügen:
+  Element 'D' wurde an Position 3 hinzugefügt
+  tail wurde auf 0 zurückgesetzt (Rotation)
+end note
+
+@enduml
+
+@startuml
+class Queue {
+    char[] array
+    int head
+    int tail
+    int capacity
+    int size
+    + Queue(int size)
+    + void enqueue(char c)
+    + char dequeue()
+    + boolean isEmpty()
+    + boolean isFull()
+}
+
+Queue : array = []
+Queue : head = 0
+Queue : tail = 0
+Queue : capacity
+Queue : size = 0
+
+note right of Queue::head
+  Zeigt auf das Element
+  am Kopf der Queue
+end note
+
+note right of Queue::tail
+  Zeigt auf die nächste
+  freie Position im Array
+end note
+
+Queue : +isFull() : size == capacity
+Queue : +isEmpty() : size == 0
+
+@enduml
+

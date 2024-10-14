@@ -1,0 +1,37 @@
+@startuml
+interface IBinaryTree<T> {
+    +void insert(T value)
+    +void remove(T value)
+    +boolean contains(T value)
+    +boolean isEmpty()
+    +void balance(TreeNode<T> node)
+}
+
+class BinarySearchTree<T extends Comparable<T>> {
+    -TreeNode<T> root
+    -int size
+    +void insert(T value)
+    +void remove(T value)
+    +boolean contains(T value)
+    +boolean isEmpty()
+    +void balance(TreeNode<T> node)
+}
+
+class TreeNode<T> {
+    -T value
+    -TreeNode<T> left
+    -TreeNode<T> right
+    +T getValue()
+    +TreeNode<T> getLeft()
+    +TreeNode<T> getRight()
+    +void setLeft(TreeNode<T> node)
+    +void setRight(TreeNode<T> node)
+}
+
+
+
+IBinaryTree <|-- BinarySearchTree
+BinarySearchTree --> TreeNode
+TreeNode --> TreeNode : left/right
+
+@enduml
