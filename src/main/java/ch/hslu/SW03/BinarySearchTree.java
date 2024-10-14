@@ -1,5 +1,16 @@
 package ch.hslu.SW03;
 
+/*
+        5
+       / \
+      2   8
+     / \  /
+    1   3 6
+*/
+
+/**
+ * Binary search tree implementation.
+ */
 public class BinarySearchTree implements BinaryTreeInterface<Integer> {
     private TreeNode<Integer> root;
     private int size;

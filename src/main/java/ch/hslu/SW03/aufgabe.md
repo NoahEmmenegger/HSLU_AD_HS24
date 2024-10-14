@@ -17,6 +17,15 @@ a.) Wie viele Wurzeln hat ein binärer Baum? 1
 b.) Was hat ein binärer Baum für eine Ordnung? Ordnung von 2, da max 2 kinder
 c.) Wie viele Niveaus benötigt ein binärer Baum im besten Fall für 31 Knoten? 5
 Wie berechnet sich dieser Wert? log2 n+1
+                 1
+                / \
+               2   3 
+             / \ / \
+            4  5 6  7
+           / \ / \ / \
+          8  9 10 11 12 13 14 15
+         / \ / \ / \ / \ / \ / \ / \
+        16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
 d.) Wie viele Niveaus ergeben sich im schlechtesten Fall?
 Wie berechnet sich dieser Wert? 30
 e.) Wie viele Knoten kann ein Binärbaum maximal je für die Niveaus 0 bis 5 enthalten? 1 + 2 + 4 + 8 + 16 + 32 = 63
